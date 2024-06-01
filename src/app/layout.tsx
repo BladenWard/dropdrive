@@ -4,6 +4,7 @@ import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@c
 
 import { GeistSans } from "geist/font/sans";
 import Link from "next/link";
+import { Button } from "~/components/ui/button";
 
 export const metadata = {
   title: "Create T3 App",
@@ -31,7 +32,9 @@ export default function RootLayout({
                                     <UserButton />
                                 </SignedIn>
                                 <SignedOut>
-                                    <SignInButton />
+                                    <SignInButton mode="modal">
+                                        <Button variant="secondary">Sign In</Button>
+                                    </SignInButton>
                                 </SignedOut>
                             </div>
                         </nav>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Button } from "~/components/ui/button";
 
 export default function HomePage() {
   return (
@@ -8,7 +8,7 @@ export default function HomePage() {
           File<span className="text-[hsl(280,100%,70%)]">Drop</span>
         </h1>
         <div className="flex">
-                    Files will be uploaded here
+            <Button variant="secondary">Hello World or sumn</Button>
         </div>
       </div>
     </main>

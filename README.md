@@ -1,6 +1,6 @@
 ## TODO
 
 -   [x] Add clerk first step
--   [ ] Add shadcn
--   [ ] Setup production and development databases
+-   [x] Add shadcn
+-   [x] Setup db w/ neon
 -   [ ] deploy to vercel

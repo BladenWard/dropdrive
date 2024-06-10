@@ -2,6 +2,7 @@
 // https://orm.drizzle.team/docs/sql-schema-declaration
 import { sql } from "drizzle-orm";
 import {
+    decimal,
     index,
     pgTableCreator,
     serial,
@@ -17,13 +18,15 @@ import {
  */
 export const createTable = pgTableCreator((name) => `FileDrop_${name}`);
 
-export const posts = createTable(
-    "post",
+export const files = createTable(
+    "files",
     {
         id: serial("id").primaryKey(),
-        name: varchar("name", { length: 256 }),
+        name: varchar("name", { length: 256 }).notNull(),
+        url: varchar("url", { length: 256 }).notNull(),
 
-        userId: serial("user_id").notNull(),
+        userId: varchar("user_id", { length: 256 }).notNull(),
+        size: decimal("size", { precision: 10, scale: 2 }).notNull(),
 
         createdAt: timestamp("created_at", { withTimezone: true })
         .default(sql`CURRENT_TIMESTAMP`)

@@ -9,7 +9,7 @@ export default function TopNav() {
 
     return (
         <header className="fixed w-full">
-            <nav className="flex items-center justify-between p-4 bg-[#2e026d]  text-white">
+            <nav className="flex items-center justify-between p-4 bg-[#15162c]  text-white">
                 <Link href="/">
                     File<span className="text-[hsl(280,100%,70%)] font-bold">Drop</span>
                 </Link>

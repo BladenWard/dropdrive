@@ -19,10 +19,10 @@ export default function RootLayout({
     return (
         <ClerkProvider>
             <html lang="en" className={`${GeistSans.variable}`}>
-                <body>
-                    <div className="grid h-screen grid-rows-[auto,1fr]">
+                <body className="min-h-screen bg-[#15162c]">
+                    <div className="grid h-auto grid-rows-[auto,1fr]">
                         <TopNav />
-                        <main className="overflow-y-scroll">{children}</main>
+                        <main className="pt-14 overflow-y-scroll">{children}</main>
                     </div>
                 </body>
             </html>

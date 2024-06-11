@@ -24,7 +24,6 @@ async function Files() {
 }
 
 export default function HomePage() {
-    // TODO: Make dialog 
     return (
         <div className="flex min-h-full flex-col bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
             <div className="container gap-12 px-16 py-12 flex items-center justify-between">
@@ -32,15 +31,31 @@ export default function HomePage() {
                     Your<span className="text-[hsl(280,100%,70%)]"> Files</span>
                 </h1>
                 <div className="flex">
-                    <form
-                        action={async () => {
-                            "use server"
-
-                            console.log("Uploading file")
-                        }}
-                    >
-                        <Button type="submit" variant="secondary">Upload File</Button>
-                    </form>
+                    <Link href="/dashboard">
+                        <Button variant="secondary">Upload File</Button>
+                    </Link>
+                </div>
+            </div>
+            <Files />
+            <div className="container gap-12 px-16 py-12 flex items-center justify-between">
+                <h1 className="font-bold text-white sm:text-[5rem]">
+                    Your<span className="text-[hsl(280,100%,70%)]"> Files</span>
+                </h1>
+                <div className="flex">
+                    <Link href="/dashboard">
+                        <Button variant="secondary">Upload File</Button>
+                    </Link>
+                </div>
+            </div>
+            <Files />
+            <div className="container gap-12 px-16 py-12 flex items-center justify-between">
+                <h1 className="font-bold text-white sm:text-[5rem]">
+                    Your<span className="text-[hsl(280,100%,70%)]"> Files</span>
+                </h1>
+                <div className="flex">
+                    <Link href="/dashboard">
+                        <Button variant="secondary">Upload File</Button>
+                    </Link>
                 </div>
             </div>
             <Files />

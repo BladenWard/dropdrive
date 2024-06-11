@@ -4,7 +4,7 @@ import { db } from "./db";
 export async function getFiles() {
     const user = auth();
 
-    if (!user.userId) throw new Error("Unauthorized");
+    // if (!user.userId) throw new Error("Unauthorized");
 
     const files = await db.query.files.findMany({
         // where: (model, { eq }) => eq(model.userId, user.userId),
